@@ -1,0 +1,18 @@
+<%= render "layouts/header" %> 
+<div class="container">
+    <div class="row">
+        <div class="col-12 pb-5">
+            <h1 class="text-center display-1">Listes des Recettes</h1>
+            <hr />
+        </div>
+    </div>
+    <% @recettes.each do |recette| %>
+        <div class="row text-center justify-content-center">
+            <div class="col-12  mb-3">
+                <a href=<%= "/recettes/" + recette.id.to_s %> class="h3" target="_blank"> <%= recette.titre %> </a>
+            </div>
+        </div>
+    
+
+    <% end %>
+</div>

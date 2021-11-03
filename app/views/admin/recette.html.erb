@@ -1,0 +1,16 @@
+<%= render "layouts/header" %> 
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center pt-4">
+            <h1><%= @recette.user.nom + " " +@recette.user.prenom  %> - <%= @recette.titre %></h1>
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <% @recette.mes_attributes.each do |attributes| %>
+            <p><b><%= attributes[0] %></b>: <%= attributes[1] %></p>
+            <br />
+        <% end %>
+        <p><b>nombre d'ingrédient</b>: <%= @recette.ingredients.length %></p>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<xml>
+    <ingredients>
+        <% @ingredients.select('nom').map(&:nom).to_a.each do |ingredient| %>
+            <ingredient><%= ingredient %></ingredient>
+        <% end %>        
+    </ingredients>
+</xml>

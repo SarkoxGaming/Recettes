@@ -1,0 +1,26 @@
+<%= render "layouts/header" %> 
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1 class="display-1 pt-3">Administration</h1>
+            <hr />
+        </div>
+    </div>
+
+    <div class="row pt-3">
+        <ul>
+            <% @users.each do |user|  %>
+                <% if user.recettes.length > 0 %>
+                    <li>
+                        <%= user.nom %> <%= user.prenom %>
+                        <ol>
+                            <% user.recettes.each do |recette| %>
+                                <li><a class="link-dark" href=<%="/admin/recettes/" + recette.id.to_s + "?is_admin=oui" %>><%= recette.titre  %></a></li>
+                            <% end %>
+                        </ol>
+                    </li>
+                <% end %>
+            <% end %>
+        </ul>
+    </div>
+</div>

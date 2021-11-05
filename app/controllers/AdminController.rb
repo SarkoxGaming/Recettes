@@ -1,3 +1,6 @@
+#Mathieu Savard
+#Créé hier
+#Modifié 21/10/2021
 class AdminController < ApplicationController
   before_action :is_admin?
   

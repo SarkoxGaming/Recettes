@@ -4,7 +4,6 @@ class RecettesController < ApplicationController
 
     def index
         @recette = Recette.find(params[:id])
-        @ingredients = @recette.ingredients
     end
 
 

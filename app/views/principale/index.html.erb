@@ -9,7 +9,7 @@
     <% @recettes.each do |recette| %>
         <div class="row text-center justify-content-center">
             <div class="col-12  mb-3">
-                <a href=<%= "/recettes/" + recette.id.to_s %> class="h3" target="_blank"> <%= recette.titre %> </a>
+                <h3><%= link_to  recette.titre, controller: "recettes", action: "index", id: recette.id %></h3>
             </div>
         </div>
     

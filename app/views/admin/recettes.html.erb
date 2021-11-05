@@ -15,7 +15,8 @@
                         <%= user.nom %> <%= user.prenom %>
                         <ol>
                             <% user.recettes.each do |recette| %>
-                                <li><a class="link-dark" href=<%="/admin/recettes/" + recette.id.to_s + "?is_admin=oui" %>><%= recette.titre  %></a></li>
+                                <li><%= link_to  recette.titre, controller: "administration", action: "recette", id: recette.id %></li>
+                                
                             <% end %>
                         </ol>
                     </li>

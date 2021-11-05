@@ -5,7 +5,6 @@
 class AdministrationController < AdminController
 
     def index
-        render html: "admin index"
     end
 
     def recettes

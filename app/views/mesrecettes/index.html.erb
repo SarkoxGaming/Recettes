@@ -11,7 +11,7 @@
         <div class="col-12">
             <ol>
                 <% @recettes.each do |recette| %>
-                    <li><a href="/mesrecettes/<%= recette.id%>"><%= recette.titre %></a></li>
+                    <li><%= link_to  recette.titre, controller: "mesrecettes", action: "specs", id: recette.id %></li>
                 <% end %>
             </ol>
         </div>
